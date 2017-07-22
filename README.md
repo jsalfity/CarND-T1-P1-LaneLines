@@ -7,7 +7,7 @@
 ---
 ### 1. Pipeline Description
 There were  several transformations that had to be done on the original image to eventually find lane lines. OpenCV was used within Python, as OpenCV contains many high level and powerful image analysis functions. 
-![alt text][./images4readme/image1]
+![alt text][./images4readme/image1.jpg]
 The steps to move from an image to drawing lane lines are as follows:
 #### Convert to Grayscale and sharpen the image
 ```
