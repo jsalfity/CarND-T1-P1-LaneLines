@@ -29,8 +29,9 @@ vertices = np.array([[(0,imshape[0]),(imshape[1]/2-x_offset, imshape[0]/2+y_offs
 image_masked=region_of_interest(edges,vertices)
 ```
 
-#### Identify the region of interest in the image
-Lane lines should only be found in the triangular region in front of the car. To get rid of some noise, I chose to crop the region of interest to be adjusted with some offset.
+#### Next is to identify the lines from edges. Lines are found by intersections in the Hough Transform
+```image_lines = hough_lines(image_masked, rho, theta, threshold, min_line_len, max_line_gap)
+```
 
 
 ![alt text][image1]
