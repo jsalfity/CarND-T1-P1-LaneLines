@@ -12,9 +12,17 @@
 There were  several transformations that had to be done on the original image to eventually find lane lines. OpenCV was used within Python, as OpenCV contains many high level and powerful image analysis functions. 
 
 The steps to move from an image to drawing lane lines are as follows:
-## Convert to Grayscale and sharpen the image
-## Identify the region of interest
-	# In this case
+#### Convert to Grayscale and sharpen the image
+`gray = grayscale(image)`
+'blur_gray=gaussian_blur(gray,kernel_size)'
+
+#### Detect edges in the image. Edges are found by finding the derivative in x and y.
+'edges = canny(blur_gray, low_threshold, high_threshold)''
+
+#### Identify the region of interest in the image
+Lane lines should only be found in the triangular region in front of the car. To get rid of some noise, I chose to crop the region of interest to be adjusted with some offset.
+
+
 
 ![alt text][image1]
 
