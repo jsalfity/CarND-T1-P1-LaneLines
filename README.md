@@ -13,24 +13,28 @@ There were  several transformations that had to be done on the original image to
 
 The steps to move from an image to drawing lane lines are as follows:
 #### Convert to Grayscale and sharpen the image
-```gray = grayscale(image)
+```
+gray = grayscale(image)
 blur_gray=gaussian_blur(gray,kernel_size)
 ```
 
 #### Detect edges in the image. Edges are found by finding the derivative in x and y.
-```edges = canny(blur_gray, low_threshold, high_threshold)
+```
+edges = canny(blur_gray, low_threshold, high_threshold)
 ```
 
 #### Identify the region of interest for lanes in the image
 Lane lines should only be found in the triangular region in front of the car. To get rid of some noise, I chose to crop the region of interest to be adjusted with some offset.
-```x_offset=50
+```
+x_offset=50
 y_offset=75
 vertices = np.array([[(0,imshape[0]),(imshape[1]/2-x_offset, imshape[0]/2+y_offset), (imshape[1]/2+x_offset, imshape[0]/2+y_offset), (imshape[1],imshape[0])]], dtype=np.int32)
 image_masked=region_of_interest(edges,vertices)
 ```
 
 #### Next is to identify the lines from edges. Lines are found by intersections in the Hough Transform
-```image_lines = hough_lines(image_masked, rho, theta, threshold, min_line_len, max_line_gap)
+```
+image_lines = hough_lines(image_masked, rho, theta, threshold, min_line_len, max_line_gap)
 ```
 
 
