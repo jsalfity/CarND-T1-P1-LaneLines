@@ -2,11 +2,11 @@
 
 [//]: # (Image References)
 
-[gray]: ./images4readme/gray.jpg "Grayscale"
-[edges]: ./images4readme/edges.jpg "Edges"
-[masked]: ./images4readme/masked.jpg "Masked"
-[lines]: ./images4readme/lines.jpg "Lines"
-[lanes]: ./images4readme/lanes.jpg "Lanes"
+[gray]: ./images4readme/gray.png "Grayscale"
+[edges]: ./images4readme/edges.png "Edges"
+[masked]: ./images4readme/masked.png "Masked"
+[lines]: ./images4readme/lines.png "Lines"
+[lanes]: ./images4readme/lanes.png "Lanes"
 
 ---
 ### 1. Pipeline Description
