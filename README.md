@@ -32,10 +32,16 @@ vertices = np.array([[(0,imshape[0]),(imshape[1]/2-x_offset, imshape[0]/2+y_offs
 image_masked=region_of_interest(edges,vertices)
 ```
 
-#### Next is to identify the lines from edges. Lines are found by intersections in the Hough Transform
+#### Ddentify the lines from edges. Lines are found by intersections in the Hough Transform
 ```
 image_lines = hough_lines(image_masked, rho, theta, threshold, min_line_len, max_line_gap)
 ```
+
+#### Detect lane lines.
+At this point, lines are found in the region of interest. To find lane lines, `draw_lines2()` was created in an ad-hoc manner to find left lane lines and right lane lines. 
+##### a. seperate the left and right lane lines by slope.
+##### b. find the average slope and y-intercept for the left lane lines and right lane lines.
+##### c. fit a line to slope and y-intercept. The lane lines should always be starting from the bottom of the image (top of the image as a matrix) and should extent to the midpoint minus some offset.
 
 
 ![alt text][image1]
