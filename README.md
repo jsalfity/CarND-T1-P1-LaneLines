@@ -2,15 +2,19 @@
 
 [//]: # (Image References)
 
-[image1]: ./examples/grayscale.jpg "Grayscale"
-
+[gray]: ./images4readme/gray.jpg "Grayscale"
+[edges]: ./images4readme/edges.jpg "Edges"
+[masked]: ./images4readme/masked.jpg "Masked"
+[lines]: ./images4readme/lines.jpg "Lines"
+[lanes]: ./images4readme/lanes.jpg "Lanes"
 ---
 ### 1. Pipeline Description
 There were  several transformations that had to be done on the original image to eventually find lane lines. OpenCV was used within Python, as OpenCV contains many high level and powerful image analysis functions. 
-![alt text][./images4readme/image1.jpg]
 The steps to move from an image to drawing lane lines are as follows:
 #### Convert to Grayscale and sharpen the image
 ```
+![alt text][image1]
+
 gray = grayscale(image)
 blur_gray=gaussian_blur(gray,kernel_size)
 ```
@@ -68,8 +72,6 @@ left_line_y1 = image.shape[0]
 left_line_x2 = int((image.shape[0]/2+y_offset-b_left)/m_left)
 left_line_y2 = int(image.shape[0]/2+y_offset)
 ```
-
-![alt text][image1]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
