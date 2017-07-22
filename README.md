@@ -13,18 +13,18 @@ There were  several transformations that had to be done on the original image to
 
 The steps to move from an image to drawing lane lines are as follows:
 #### Convert to Grayscale and sharpen the image
-`gray = grayscale(image)`
-`blur_gray=gaussian_blur(gray,kernel_size)`
+```gray = grayscale(image)
+blur_gray=gaussian_blur(gray,kernel_size)```
 
 #### Detect edges in the image. Edges are found by finding the derivative in x and y.
-`edges = canny(blur_gray, low_threshold, high_threshold)`
+```edges = canny(blur_gray, low_threshold, high_threshold)```
 
 #### Identify the region of interest for lanes in the image
 Lane lines should only be found in the triangular region in front of the car. To get rid of some noise, I chose to crop the region of interest to be adjusted with some offset.
-`x_offset=50`
-`y_offset=75`
-`vertices = np.array([[(0,imshape[0]),(imshape[1]/2-x_offset, imshape[0]/2+y_offset), (imshape[1]/2+x_offset, imshape[0]/2+y_offset), (imshape[1],imshape[0])]], dtype=np.int32)`
-`image_masked=region_of_interest(edges,vertices)`
+```x_offset=50
+y_offset=75
+vertices = np.array([[(0,imshape[0]),(imshape[1]/2-x_offset, imshape[0]/2+y_offset), (imshape[1]/2+x_offset, imshape[0]/2+y_offset), (imshape[1],imshape[0])]], dtype=np.int32)
+image_masked=region_of_interest(edges,vertices)```
 
 
 #### Identify the region of interest in the image
