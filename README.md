@@ -69,7 +69,7 @@ left_line_x2 = int((image.shape[0]/2+y_offset-b_left)/m_left)
 left_line_y2 = int(image.shape[0]/2+y_offset)
 ```
 
-
+![alt text][image2]
 
 
 ### 2. Identify potential shortcomings with your current pipeline
