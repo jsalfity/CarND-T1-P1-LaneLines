@@ -1,10 +1,5 @@
 # **Finding Lane Lines on the Road** 
 
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
 [//]: # (Image References)
 
 [image1]: ./examples/grayscale.jpg "Grayscale"
@@ -14,7 +9,12 @@ The goals / steps of this project are the following:
 ### Reflection
 
 ### 1. Pipeline Description
-Much of the 
+There were  several transformations that had to be done on the original image to eventually find lane lines. OpenCV was used within Python, as OpenCV contains many high level and powerful image analysis functions. 
+
+The steps to move from an image to drawing lane lines are as follows:
+## Convert to Grayscale and sharpen the image
+## Identify the region of interest
+	# In this case
 
 ![alt text][image1]
 
