@@ -79,7 +79,7 @@ One shortcoming is the small sample size of videos to process. Videos from diffe
 
 
 ### 3. Suggest possible improvements to your pipeline
-An improvement to add use the average, from all the frames, of the mean and y-intercept of each frame. Given the camera being in a fixed location, the lane lines look like they will be in generally the same x,y locations and contain the same slope.
+An improvement to add use the average, from all the frames, of the mean and y-intercept of each frame. Given the camera being in a fixed location, the lane lines look like they will be in generally the same x,y locations and contain the same slope. This would decrease the noise and jitter in each frame.
 Another improvement is to fit a spline or high order polynomial curve to the lanes.
 
 
