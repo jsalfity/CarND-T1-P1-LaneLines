@@ -75,14 +75,12 @@ left_line_y2 = int(image.shape[0]/2+y_offset)
 
 
 ### 2. Identify potential shortcomings with your current pipeline
-The shortcomings right now is the small sample size of videos to process. Videos from different freeways, different time of days, and weather are all more data to process and tune the lane finding algorithm.
+One shortcoming is the small sample size of videos to process. Videos from different freeways, different time of days, and weather are all more data to process and tune the lane finding algorithm.
 
 
 ### 3. Suggest possible improvements to your pipeline
 An improvement to add use the average, from all the frames, of the mean and y-intercept of each frame. Given the camera being in a fixed location, the lane lines look like they will be in generally the same x,y locations and contain the same slope.
 Another improvement is to fit a spline or high order polynomial curve to the lanes.
 
-
-# **Finding Lane Lines on the Road** 
 
 
